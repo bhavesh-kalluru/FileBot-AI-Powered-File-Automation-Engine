@@ -19,7 +19,6 @@ An intelligent, GenAI‑driven file management assistant that automates organiza
   * [Command‑Line Interface](#command-line-interface)
   * [Python API](#python-api)
 * [Configuration](#configuration)
-* [Extensible Plugins](#extensible-plugins)
 * [Contributing](#contributing)
 * [Roadmap](#roadmap)
 * [License](#license)
@@ -125,31 +124,6 @@ model:
   confidence_threshold: 0.75
 ```
 
----
-
-## Extensible Plugins
-
-Add support for new storage backends or custom workflows:
-
-1. Create a new plugin module under `filebot/plugins/`
-2. Extend the `BaseConnector` or `BaseWorkflow` class
-3. Register your plugin in `filebot/plugins/__init__.py`
-
-```python
-from filebot.plugins import BaseConnector
-
-class S3Connector(BaseConnector):
-    name = "s3"
-    def authenticate(self, **creds):
-        # implement AWS S3 auth
-        ...
-
-    def list_files(self, path):
-        # list objects in S3 bucket
-        ...
-```
-
----
 
 ## Contributing
 
