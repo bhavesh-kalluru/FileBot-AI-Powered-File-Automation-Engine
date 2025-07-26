@@ -106,24 +106,6 @@ for file in results:
 
 ---
 
-## Configuration
-
-FileBot uses a YAML config file to store credentials and preferences:
-
-```yaml
-# ~/.filebot/config.yml
-storage:
-  local: true
-  google_drive:
-    enabled: true
-    client_id: YOUR_CLIENT_ID
-    client_secret: YOUR_CLIENT_SECRET
-
-model:
-  name: "custom-transformer-v1"
-  confidence_threshold: 0.75
-```
-
 
 ## Contributing
 
